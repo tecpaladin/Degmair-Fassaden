@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+/* Resets */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #006db3;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navigation */
+.navbar {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ccc;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.5s;
+  z-index: 100 !important;
+}
+
+.navbar h1 {
+  font-family: Anton, "Segoe UI";
+  color: #002984;
+  border-bottom: 4px solid #d00000;
+  border-top: 4px solid #d00000;
+  padding: 0 5px;
+}
+
+.navbar.top {
+  color: #fff;
+  background: transparent;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: inherit;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.navbar a:hover {
+  border-color: var(--primary-color, #0283d0);
+}
+
+/* Startseite*/
+#start {
+  background: url(../images/paint02.jpg) no-repeat center center / cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+#start::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#start * {
+  z-index: 10;
+}
+
+#start .content {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#start .content h2 {
+  font-size: 55px;
+}
+
+#start .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+/* Leistungen */
+#services {
+  padding: 30px;
+}
+
+.service {
+  flex: 1;
+  padding: 20px;
+}
+
+.service h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.service i {
+  color: #fff;
+  background-color: var(--primary-color, #0283d0);
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* icon hda to be adjusted so that it looks round */
+.service:last-child i {
+  width: 72px;
+}
+
+/* Galerie */
+#galerie .images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 0 10px;
+}
+
+#galerie .images img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Kontakt */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-controll {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: var(--primary-color);
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+#contact form button:hover {
+  opacity: 0.8;
+}
+
+.about img {
+  flex: 1;
+}
+
+.about .flex-column {
+  flex: 1;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  padding: 40px;
+}
+
+#footer a {
+  color: #fff;
+  margin: 0 20px;
+}
+
+#footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    padding: 20px;
+    height: 120px;
+  }
+
+  #navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  #start .content h2 {
+    font-size: 40px;
+  }
+
+  #start .content p {
+    font-size: 18px;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-column .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .flex-columns .row {
+    flex-direction: column;
+  }
+
+  #galerie .images {
+    grid-template-columns: 1fr;
+  }
+
+  #galerie .images img {
+    max-width: 100%;
+  }
+
+  .solutions .column-2 {
+    margin-top: -7px;
+  }
+}
