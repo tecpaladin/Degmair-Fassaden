@@ -27,7 +27,7 @@
     <!-- Startseite -->
     <header id="start">
       <div id="navbar" class="navbar top">
-        <h1>DEGMAIR</h1>
+        <a href="#start"><h1>DEGMAIR</h1></a>
         <nav>
           <ul>
             <li><a href="#start">Startseite</a></li>
@@ -175,8 +175,15 @@
           </div>
           <div class="column">
             <div class="column-2 bg-light">
+              "
               <h2>Rückruf anfordern</h2>
-              <form action="" class="callback-form">
+              <form
+                method="POST"
+                data-netlify="true"
+                action=""
+                class="callback-form"
+                data-netlify-recaptcha="true"
+              >
                 <div class="form-controll">
                   <label for="name"></label>
                   <input type="text" name="name" id="name" placeholder="Name" />
@@ -205,6 +212,9 @@
                   id="submit"
                   class="btn btn-primary"
                 />
+                <div class="my-2">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
               </form>
             </div>
           </div>
@@ -212,13 +222,17 @@
       </section>
     </main>
     <footer id="footer" class="bg-dark">
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-      </div>
-      <p>Copyright &copy; 2021 - Degmair Fassaden</p>
+      <p>
+        Copyright &copy; 2021 - Degmair Fassaden |
+        <a href="impressum.html">Impressum</a> |
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a
+          target="_blank"
+          href="https://de-de.facebook.com/degmair.fassaden/"
+          class="social-icon"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+      </p>
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
