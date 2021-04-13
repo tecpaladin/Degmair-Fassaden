@@ -175,7 +175,6 @@
           </div>
           <div class="column">
             <div class="column-2 bg-light">
-              "
               <h2>Rückruf anfordern</h2>
               <form
                 name="Recall-request"
@@ -259,22 +258,6 @@
           scrolled = false;
         }
       };
-
-      // Smooth Scrolling
-      $("#navbar a, .btn").on("click", function (e) {
-        if (this.hash !== "") {
-          e.preventDefault();
-
-          const hash = this.hash;
-
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top - 100,
-            },
-            800
-          );
-        }
-      });
     </script>
   </body>
 </html>
