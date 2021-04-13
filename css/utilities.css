@@ -1,5 +1,5 @@
 :root {
- --primary-color: #006db3;
+  --primary-color: #006db3;
 }
 
 /* Buttons */
@@ -51,7 +51,7 @@
 }
 
 /* Flex-columns */
-.flex-columns .row{
+.flex-columns .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -97,7 +97,6 @@
   margin: 20px 0;
 }
 
-
 /* Section header */
 .section-header {
   padding: 30px;
@@ -115,4 +114,10 @@
 
 .section-padding {
   padding: 20px 20px 40px;
+}
+
+/* margin */
+
+.my-2 {
+  margin: 20px 0;
 }
