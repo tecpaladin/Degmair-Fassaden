@@ -26,6 +26,20 @@
   border: 1px solid #fff;
 }
 
+.submit-btn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--primary-color, #0283d0);
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
 /* Background */
 
 .bg-primary {
