@@ -180,38 +180,25 @@ input {
 }
 
 /* Kontakt */
-.callback-form {
-  width: 100%;
-  padding: 20px 0;
+#contact address p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  font-style: normal;
 }
 
-.callback-form label {
-  display: block;
-  margin-bottom: 5px;
+#contact address i {
+  font-size: 24px;
+  margin-right: 24px;
 }
 
-.callback-form .form-controll {
-  margin-bottom: 15px;
+#contact address i.fa-map-marker-alt {
+  margin-right: 30px;
 }
 
-.callback-form input {
-  width: 100%;
-  padding: 4px;
-  height: 40px;
-  border: #f5f5f5 1px solid;
-}
-
-.callback-form input:focus {
-  outline-color: var(--primary-color);
-}
-
-.callback-form .btn {
-  padding: 12px 0;
-  margin-top: 20px;
-}
-
-#contact form button:hover {
-  opacity: 0.8;
+#contact address a {
+  color: var(--primary-color, #0283d0);
+  text-decoration: underline;
 }
 
 .about img {
@@ -226,6 +213,7 @@ input {
 main.centered {
   margin: 30px auto;
   width: 1200px;
+  max-width: 80%;
 }
 
 main.centered h3 {
@@ -279,6 +267,7 @@ main.centered .bold {
 #footer a:hover {
   color: var(--primary-color-light);
 }
+
 
 /* Tablet */
 @media screen and (max-width: 768px) {
