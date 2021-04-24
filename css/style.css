@@ -343,6 +343,10 @@ main.centered .bold {
     font-size: 32px;
   }
 
+  #contact h2 {
+    font-size: 28px;
+  }
+
   #footer a {
     margin: 0 10px;
   }
