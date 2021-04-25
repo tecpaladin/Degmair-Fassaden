@@ -176,8 +176,8 @@
           <div class="column">
             <div class="column-2 bg-light">
               <h2>So können Sie uns erreichen.</h2>
-              <p>Sie möchten wissen, ob wir der richtige Partner für Ihr
-                Projekt sind oder einfach mal Hallo sagen?<br> Kontaktieren Sie uns für
+              <p class="description">Sie möchten wissen, ob wir der richtige Partner für Ihr
+                Projekt sind? Kontaktieren Sie uns gerne für
                 eine unverbindliche Anfrage und Sie erhalten alle wichtigen Informationen
                 für Ihre Entscheidung.
               </p>
@@ -246,6 +246,43 @@
           );
         }
       });
+
+      
+      // Navbar styling depending on scroll height for mobile devices
+      if (window.innerWidth <= 1400) {
+        const navStart = document.querySelector("nav a[href='#start']");
+        const navServices = document.querySelector("nav a[href='#services']");
+        const navGalerie = document.querySelector("nav a[href='#galerie']");
+        const navContact = document.querySelector("nav a[href='#contact']");
+
+        const servicesSection = document.querySelector("section#services");
+        const galerieSection = document.querySelector("section#galerie");
+        const contactSection = document.querySelector("section#contact");
+
+        const servicesOffset = window.pageYOffset + servicesSection.getBoundingClientRect().top;
+        const galerieOffset = window.pageYOffset + galerieSection.getBoundingClientRect().top;
+        const contactOffset = window.pageYOffset + contactSection.getBoundingClientRect().top;
+
+        window.addEventListener('scroll', function() {
+          let scrollpos = window.pageYOffset;
+          
+          if (scrollpos < servicesOffset - 101) {
+            navStart.classList.add("active");
+            navServices.classList.remove("active");
+          } else if (scrollpos < galerieOffset - 101) {
+            navStart.classList.remove("active");
+            navServices.classList.add("active");
+            navGalerie.classList.remove("active");
+          } else if (scrollpos < contactOffset - 200) {
+            navGalerie.classList.add("active");
+            navServices.classList.remove("active");
+            navContact.classList.remove("active");
+          } else {
+            navGalerie.classList.remove("active");
+            navContact.classList.add("active")
+          }
+        })
+      }
     </script>
   </body>
 </html>

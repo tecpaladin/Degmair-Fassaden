@@ -89,6 +89,10 @@ input {
   transition: border-color 0.2s;
 }
 
+.navbar nav a.active {
+  border-color: var(--primary-color, #0283d0);
+}
+
 .navbar nav a:hover {
   border-color: var(--primary-color, #0283d0);
 }
@@ -199,6 +203,10 @@ input {
 #contact address a {
   color: var(--primary-color, #0283d0);
   text-decoration: underline;
+}
+
+#contact .description {
+  max-width: 75%;
 }
 
 .about img {
