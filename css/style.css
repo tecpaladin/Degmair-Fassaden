@@ -277,6 +277,13 @@ main.centered .bold {
 }
 
 
+@media screen and (max-width: 1400px) {
+  .navbar nav a:hover {
+    border: none;
+    border-color: transparent;
+  }
+}
+
 /* Tablet */
 @media screen and (max-width: 768px) {
   main.centered {
