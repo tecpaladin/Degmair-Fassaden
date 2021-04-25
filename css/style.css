@@ -282,6 +282,10 @@ main.centered .bold {
     border: none;
     border-color: transparent;
   }
+
+  .navbar nav a.active {
+    border-color: var(--primary-color, #0283d0);
+  }
 }
 
 /* Tablet */
